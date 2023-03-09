@@ -11,7 +11,7 @@ const FormInput = ({ label, ...otherProps }) => {
             otherProps.value.length ? "Shrink" : ""
           } form-input-label`}
         >
-          Display Name
+          {label}
         </label>
       )}
     </div>
