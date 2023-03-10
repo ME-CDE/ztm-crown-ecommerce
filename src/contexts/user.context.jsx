@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import {
   createUserDocumentFromAuth,
   onAuthStateChangedListener,
@@ -8,6 +8,10 @@ const UserContext = createContext({
   currentUser: null,
   setCurrentUser: () => null,
 });
+
+const useUserContext = ()=>{
+  return useContext(UserContext)
+}
 
 const UserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
@@ -32,4 +36,5 @@ const UserProvider = ({ children }) => {
   );
 };
 
-export { UserContext, UserProvider };
+
+export { useUserContext, UserProvider };
