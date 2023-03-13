@@ -17,7 +17,7 @@ const CartDropDown = () => {
   const { setIsCartOpen, cartItems } = useCartContext();
 
   const handleClick = () => {
-    setIsCartOpen((previous) => !previous);
+    setIsCartOpen(false)
     go("/checkout");
   };
   return (

@@ -9,10 +9,10 @@ import {
 } from "./cart-icon.styles.jsx";
 
 const CartIcon = () => {
-  const { setIsCartOpen, cartCount } = useCartContext();
+  const { setIsCartOpen, cartCount,isCartOpen } = useCartContext();
 
   const toggleCart = () => {
-    setIsCartOpen((previous) => !previous);
+    setIsCartOpen(!isCartOpen)
   };
 
   return (
